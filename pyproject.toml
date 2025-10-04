@@ -1,0 +1,52 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=77.0.3" ]
+
+[project]
+name = "dj-rest-auth"
+description = "Authentication and Registration in Django Rest Framework"
+readme = "README.md"
+keywords = [
+  "api",
+  "auth",
+  "django",
+  "django-registration",
+  "registration",
+  "rest",
+  "rest-framework",
+]
+license = "MIT"
+authors = [
+  { name = "iMerica", email = "imichael@pm.me" },
+]
+requires-python = ">=3.10"
+classifiers = [
+  "Framework :: Django",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development",
+]
+dynamic = [ "version" ]
+dependencies = [
+  "django>=4.2,<6",
+  "djangorestframework>=3.13",
+]
+
+optional-dependencies.with-social = [
+  "django-allauth[socialaccount]>=64",
+]
+urls.Homepage = "https://github.com/iMerica/dj-rest-auth"
+
+[tool.setuptools.dynamic]
+version = { attr = "dj_rest_auth.__version__.__version__" }
+
+[tool.setuptools.packages.find]
+include = [ "dj_rest_auth*" ]
