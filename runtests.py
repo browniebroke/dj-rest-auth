@@ -1,4 +1,4 @@
-# This file mainly exists to allow python setup.py test to work.
+# Entry point to run the test suite
 # flake8: noqa
 import os
 import sys
